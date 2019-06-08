@@ -5,11 +5,10 @@ import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
 class App extends React.Component {
-  state = {text: '' };
+  state = {texts: [] };
 
   onSearchSubmit = (term) => {
-    this.setState({ text: term });
-    console.log(this);
+    this.setState({ texts: [...this.state.texts, term] });
   };
 
   render() {
@@ -20,7 +19,7 @@ class App extends React.Component {
           onSubmit={this.onSearchSubmit} 
         />
         <TodoList 
-          text={this.state.text} 
+          texts={this.state.texts} 
         />
       </div>
     );
