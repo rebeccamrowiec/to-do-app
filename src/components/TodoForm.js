@@ -6,7 +6,12 @@ class TodoForm extends React.Component {
   onFormSubmit = event => {
     event.preventDefault();
     this.props.onSubmit(this.state.term);
+    
   }
+
+  // componentDidUpdate() {
+  //   this.updateState = { term: '' };
+  // }
 
   render() {
     return (

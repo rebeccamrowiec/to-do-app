@@ -7,12 +7,26 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .title {
-  margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto 20px;
+  /* font-family: Arial, Helvetica, sans-serif; */
   color: #282828;
   text-decoration: underline;
 }
 
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.item-text {
+  margin-right: 10px;
+}
+
+.item-button {
+  height: 20px;
+  width: 20px;
+}

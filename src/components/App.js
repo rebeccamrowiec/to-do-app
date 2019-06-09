@@ -11,6 +11,10 @@ class App extends React.Component {
     this.setState({ texts: [...this.state.texts, term] });
   };
 
+  // componentDidMount() {
+  //   term: '';
+  // }
+
   render() {
     return (
       <div className="app">

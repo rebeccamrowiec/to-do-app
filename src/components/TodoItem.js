@@ -1,11 +1,17 @@
-// import React from 'react';
+import React from 'react';
 
-// const TodoItem = (props) => {  
-//   const text = props.text;
-//   return <h3>{text}</h3>;
-// };
+const TodoItem = (props) => {  
+  const text = props.text;
+  
+  return (
+    <div className="item">
+      <h3 className="item-text">{text}</h3>
+      <button className="item-button"></button>
+    </div>
+  );
+};
 
-// export default TodoItem;
+export default TodoItem;
 
 
 
