@@ -10,8 +10,8 @@ const TodoList = (props) => {
   //   return <h3 key={text.id}>{text}</h3>
   // });
 
-  const texts = props.texts.map((text) => {
-    return <TodoItem key={text.id} text={text} />
+  const texts = props.texts.map((text, i) => {
+    return <TodoItem key={i} text={text} />
   });
   
   return <div>{texts}</div>;

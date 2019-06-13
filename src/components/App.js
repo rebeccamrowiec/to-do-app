@@ -8,7 +8,11 @@ class App extends React.Component {
   state = {texts: [] };
 
   onSearchSubmit = (term) => {
-    this.setState({ texts: [...this.state.texts, term] });
+    this.setState({ texts: [
+      ...this.state.texts, term
+    ] 
+  });
+
   };
 
   // componentDidMount() {
