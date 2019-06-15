@@ -1,17 +1,22 @@
-import React from 'react';
+// import React from 'react';
 
-const TodoItem = (props) => {  
-  const text = props.text;
+// const TodoItem = (props) => {  
+//   const text = props.text;
+//   // const key = props.key;
   
-  return (
-    <div className="item">
-      <h3 className="item-text">{text}</h3>
-      <button className="item-button"></button>
-    </div>
-  );
-};
+//   // removeItem(e) {
+//   //   this.props.removeText(item);
+//   // }
 
-export default TodoItem;
+//   return (
+//     <div className="item">
+//       <h3 className="item-text">{text}</h3>
+//       {/* <button className="item-button" onClick={() => { this.removeItem(key) }}></button> */}
+//     </div>
+//   );
+// };
+
+// export default TodoItem;
 
 
 

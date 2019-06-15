@@ -1,28 +1,25 @@
 import React from 'react';
-import TodoItem from './TodoItem';
+// import TodoItem from './TodoItem';
 
 
-const TodoList = (props) => {  
-  // texts = Array.from(props.texts)
-  // console.log(props.text);
+class TodoList extends React.Component {  
+  render() {
 
-  // const texts = props.texts.map((text) => {
-  //   return <h3 key={text.id}>{text}</h3>
-  // });
+    const { removeText } = this.props
 
-  const texts = props.texts.map((text, i) => {
-    return <TodoItem key={i} text={text} />
-  });
+    const texts = this.props.texts.map((text, i) => {
+      return (
+        <div className="item" key={i}>
+          <h3 className="item-text">{text}</h3>
+          <button className="item-button" onClick={() => { removeText(text) }}>delete</button>
+        </div>
+      );
+
+      // return <TodoItem key={i} text={text} />
+    });
   
-  return <div>{texts}</div>;
-};
-
-// const TodoList = (props) => {  
-//   const texts = props.texts.map(text => {
-//     return <TodoItem key={text} text={text} />
-//   });
-  
-//   return <div>{texts}</div>;
-// };
+    return <div>{texts}</div>;
+  }
+}
 
 export default TodoList;

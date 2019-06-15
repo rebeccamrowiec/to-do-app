@@ -5,19 +5,35 @@ import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.removeText = this.removeText.bind(this);
+  }
+
   state = {texts: [] };
 
   onSearchSubmit = (term) => {
     this.setState({ texts: [
       ...this.state.texts, term
     ] 
-  });
+    });
 
+    console.log(this.removeText);
   };
 
-  // componentDidMount() {
-  //   term: '';
-  // }
+  removeText(name){
+
+    console.log(this.state, name);
+
+    // [item1,item2,item3].filter(el => {
+    //  
+   // }) 
+
+    this.setState({
+      texts: this.state.texts.filter(el => el !== name)
+    })
+  }
 
   render() {
     return (
@@ -28,6 +44,7 @@ class App extends React.Component {
         />
         <TodoList 
           texts={this.state.texts} 
+          removeText={this.removeText}
         />
       </div>
     );
@@ -35,11 +52,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-
-// const App = () => {
-//   return (
-//     <div>Hi</div>
-//   );
-// };
