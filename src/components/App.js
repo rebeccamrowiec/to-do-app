@@ -19,16 +19,12 @@ class App extends React.Component {
     ] 
     });
 
-    console.log(this.removeText);
+    // console.log(this.removeText);
   };
 
   removeText(name){
 
-    console.log(this.state, name);
-
-    // [item1,item2,item3].filter(el => {
-    //  
-   // }) 
+    // console.log(this.state, name);
 
     this.setState({
       texts: this.state.texts.filter(el => el !== name)
