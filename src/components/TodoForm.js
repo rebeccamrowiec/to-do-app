@@ -19,9 +19,14 @@ class TodoForm extends React.Component {
           value={this.state.term} 
           onChange={e => this.setState({ term: e.target.value })} 
         />
+        <button></button>
       </form>
     );
   }
 }
+
+//Deletes multiples of same item together!
+//Adds empty item, if empty - don't add
+
 
 export default TodoForm;

@@ -16,10 +16,12 @@ class App extends React.Component {
   };
 
   onSearchSubmit = (term) => {
+    if (term != null) {
     this.setState({ texts: [
       ...this.state.texts, term
     ] 
     });
+  }
 
     // console.log(this.removeText);
   };
