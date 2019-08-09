@@ -11,7 +11,9 @@ class App extends React.Component {
     this.removeText = this.removeText.bind(this);
   }
 
-  state = {texts: [] };
+  state = {
+    texts: [] 
+  };
 
   onSearchSubmit = (term) => {
     this.setState({ texts: [

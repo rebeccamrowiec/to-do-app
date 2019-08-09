@@ -1,7 +1,9 @@
 import React from 'react';
 
 class TodoForm extends React.Component {
-  state = { term: '' };
+  state = { 
+    term: '' 
+  };
 
   onFormSubmit = event => {
     event.preventDefault();
