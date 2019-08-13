@@ -5,7 +5,6 @@ import TodoItem from './TodoItem';
 class TodoList extends React.Component {  
   render() {
     const { removeText } = this.props
-    // console.log(removeText);
 
     const texts = this.props.texts.map((text, i) => {
       return <TodoItem key={i} count={i} text={text} removeText={removeText} />;

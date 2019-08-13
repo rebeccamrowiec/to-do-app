@@ -17,31 +17,17 @@ class App extends React.Component {
 
   onSearchSubmit = (term) => {
     if (term !== '') {
-      this.setState({ texts: [
-        ...this.state.texts, term
-      ] 
-    });
-  }
-
-    // console.log(this.removeText);
+      this.setState({ 
+        texts: [...this.state.texts, term] 
+      });
+    }
   };
 
   removeText(index){
-    // console.log(this.state, name);
     this.setState({
       texts: this.state.texts.filter((el, eIndex) => eIndex !== index)
     })
   }
-
-  // removeText(name){
-  //   console.log(this.state, name);
-
-  //   this.setState({
-  //     texts: this.state.texts.filter((text, el) => {
-  //       return el !== name;
-  //     })
-  //   })
-  // }
 
   render() {
     return (
