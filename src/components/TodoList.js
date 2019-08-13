@@ -8,7 +8,7 @@ class TodoList extends React.Component {
     // console.log(removeText);
 
     const texts = this.props.texts.map((text, i) => {
-      return <TodoItem key={i} text={text} removeText={removeText} />;
+      return <TodoItem key={i} count={i} text={text} removeText={removeText} />;
     });
 
     return <div>{texts}</div>;

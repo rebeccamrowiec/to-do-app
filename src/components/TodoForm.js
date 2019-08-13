@@ -13,20 +13,17 @@ class TodoForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
+      <form className="form" onSubmit={this.onFormSubmit}>
         <input 
+          className="form-input"
           type="text" 
           value={this.state.term} 
           onChange={e => this.setState({ term: e.target.value })} 
         />
-        <button></button>
+        <button className="form-button">Add new item</button>
       </form>
     );
   }
 }
-
-//Deletes multiples of same item together!
-//Adds empty item, if empty - don't add
-
 
 export default TodoForm;
