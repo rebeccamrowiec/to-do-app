@@ -4,7 +4,7 @@ class TodoItem extends React.Component {
   changeColor = event => {
     event.preventDefault();
     console.log('red');
-    // document.getElementById("red").style.color = "red";
+    document.getElementById("red").style.backgroundColor = "red";
   }
   
   render () {
@@ -15,7 +15,7 @@ class TodoItem extends React.Component {
     return (
       <div className="item">
         <h3 className="item-text">{text}</h3>
-        <button id="red" className="item-button" onClick={() => { removeText(count) }}></button>
+        <button id="red" className="item-button" onClick={() => { removeText(count) }} onMouseOver={this.changeColor}></button>
       </div>
     );
   }
@@ -24,3 +24,5 @@ class TodoItem extends React.Component {
 export default TodoItem;
 
 // style={{ backgroundColor: bgColor }}
+
+// onClick={() => { removeText(count) }}
