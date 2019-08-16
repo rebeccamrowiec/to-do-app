@@ -12,7 +12,8 @@ class App extends React.Component {
   }
 
   state = {
-    texts: [] 
+    texts: [], 
+    bgColor: ''
   };
 
   onSearchSubmit = (term) => {
@@ -25,8 +26,9 @@ class App extends React.Component {
 
   removeText(index){
     this.setState({
-      texts: this.state.texts.filter((el, eIndex) => eIndex !== index)
-    })
+      texts: this.state.texts.filter((el, eIndex) => eIndex !== index),
+      // bgColor: 'red'
+    });
   }
 
   render() {
@@ -38,6 +40,7 @@ class App extends React.Component {
         />
         <TodoList 
           texts={this.state.texts} 
+          // bgColor={this.state.bgColor}
           removeText={this.removeText}
         />
       </div>
