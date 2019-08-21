@@ -20,7 +20,7 @@ class TodoForm extends React.Component {
           value={this.state.term} 
           onChange={e => this.setState({ term: e.target.value })} 
         />
-        <button className="form-button">Add new item</button>
+        <button className="form-button">Add</button>
       </form>
     );
   }

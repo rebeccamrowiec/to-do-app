@@ -13,7 +13,7 @@ class App extends React.Component {
 
   state = {
     texts: [], 
-    bgColor: ''
+    // bgColor: ''
   };
 
   onSearchSubmit = (term) => {
