@@ -1,4 +1,4 @@
-import './Todo.css';
+import './Todo.scss';
 import React from 'react';
 import Title from './Title';
 import TodoForm from './TodoForm';
@@ -13,7 +13,6 @@ class App extends React.Component {
 
   state = {
     texts: [], 
-    // bgColor: ''
   };
 
   onSearchSubmit = (term) => {
@@ -27,7 +26,6 @@ class App extends React.Component {
   removeText(index){
     this.setState({
       texts: this.state.texts.filter((el, eIndex) => eIndex !== index),
-      // bgColor: 'red'
     });
   }
 
@@ -36,11 +34,10 @@ class App extends React.Component {
       <div className="app">
         <Title />
         <TodoForm 
-          onSubmit={this.onSearchSubmit} 
+          onSubmit={this.onSearchSubmit}
         />
         <TodoList 
           texts={this.state.texts} 
-          // bgColor={this.state.bgColor}
           removeText={this.removeText}
         />
       </div>
